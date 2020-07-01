@@ -317,6 +317,16 @@
 .max-w--60 {
     max-width: 60px;
 }
+.max-w--933 {
+    max-width: 933px;
+    width: 100%;
+    margin: 0 auto;
+}
+.max-w--440 {
+    max-width: 440px;
+    width: 100%;
+    margin: 0 auto;
+}
 .w--150 {
     max-width: 150px;
     width: 100%;
@@ -402,6 +412,7 @@
     border-radius: 35px;
     color: #fff;
     outline: none;
+    transition: all .3s;
 }
 .btn-red:hover {
     background-color: transparent;
@@ -416,6 +427,12 @@
     border-radius: 35px;
     color: #FF2A13;
     outline: none;
+    transition: all .3s;
+}
+.btn-red-bordered:hover {
+    background-color: #FF2A13;
+    border: 2px solid #FF2A13;
+    color: #FFFFFF;
 }
 .btn-transparent {
     border: 0 ;
@@ -492,6 +509,53 @@
     line-height: 21px;
     color: #FF2A13;
 }
+.roboto-16 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px; color: #7C7E88;
+}
+.roboto-14 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #4C505F;
+}
+.roboto-13 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    color: #7C7E88;
+}
+.roboto-12 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #7C7E88;
+}
+.roboto-22 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    color: #4C505F;
+}
+.roboto-18-gray {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #4C505F;
+}
 .pointer {
     cursor: pointer;
 }
@@ -513,7 +577,6 @@
     right: 0;
     text-align: center;
 }
-
 
 /*custom checkbox*/
 input[type=checkbox] + label {

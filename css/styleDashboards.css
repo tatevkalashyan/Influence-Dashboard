@@ -6,7 +6,8 @@ body {
     width: 80px;
     background-color: #ffffff;
     color: #000;
-    left: 160px;
+    /*left: 160px;*/
+    left: 0;
     top: 0;
     box-shadow: 0 0 2px rgba(137, 138, 140, 0.2);
     padding-bottom: 100px;
@@ -44,6 +45,7 @@ body {
    width: 100%;
     background: #F5F7FB;
     margin-left: 80px;
+    min-height: 100vh;
     transition: margin-left .4s;
 }
 .icon-file-1:before {
@@ -223,7 +225,6 @@ li {
     color: #ccc;
     cursor: pointer;
 }
-
 #lgMenu.enter,
 #lgMenu-view.enter,
 #profileMenu.enter {
@@ -538,6 +539,17 @@ li {
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 6px;
+    position: relative;
+}
+.prof-img-area .abs {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    background-color: #d9d9d9a6;
+    padding-top: 10px;
 }
 .form-control:focus {
     color: #495057;
@@ -665,3 +677,152 @@ li {
 #payment-method .bg-light-blue {
     padding: 50px 25px 30px;
 }
+#account-profile .max-w--933 {
+    border: 1px solid #D1CECE;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+#account-profile .rightSide-content-radio .form-group label {
+    position: relative;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 156%;
+    color: #575757;
+}
+#account-profile .rightSide-content-radio .form-group input[type=checkbox]:checked + label:before {
+    border-color: transparent;
+}
+#account-profile .rightSide-content-radio .form-group input:checked + label:after {
+    content: '';
+    top: 6px;
+}
+#account-profile .btn-red-bordered,
+#account-profile .btn-red {
+    max-width: 109px;
+    width: 100%;
+    height: 48px;
+    margin-left: 10px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+#account-profile div.checkbox.switcher label, div.radio.switcher label {
+    padding: 0;
+    margin-bottom: 0;
+    display: flex;
+}
+#account-profile div.checkbox.switcher label input, div.radio.switcher label input {
+    display: none;
+}
+#account-profile div.checkbox.switcher label input + span, div.radio.switcher label input + span {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    width: 36px;
+    height: 23px;
+    background: #F05076;
+    border: 1px solid #eee;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+#account-profile div.checkbox.switcher label input + span small, div.radio.switcher label input + span small {
+    position: absolute;
+    display: block;
+    width: 55%;
+    height: 90%;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    left: 1px;
+    top: 1px;
+}
+#account-profile div.checkbox.switcher label input:checked + span, div.radio.switcher label input:checked + span {
+    background: #25C897;
+    border-color: #25C897;
+    position: relative;
+}
+.on-off:before{
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 9px;
+}
+#account-profile div.checkbox.switcher label input:checked + span .on-off:before {
+    content: "ON";
+    color: #25C897;
+    position: absolute;
+    top: 6px;
+    left: 4px;
+}
+#account-profile div.checkbox.switcher label input + span .on-off:before , div.radio.switcher label input + span {
+    content: "OFF";
+    color: #F05076;
+    position: absolute;
+    top: 6px;
+    left: 2px;
+}
+#account-profile div.checkbox.switcher label input:checked + span small, div.radio.switcher label input:checked + span small {
+    left: 45%;
+    top: 1px;
+}
+#account-profile .social-input {
+    background: #FFFFFF;
+    border: 1px solid #DFE4EC;
+    border-radius: 5px;
+    padding: 0 15px;
+    outline: none;
+}
+.gray-bordered-btn {
+    /*min-width: 135px;*/
+    height: 33px;
+    background: #FFFFFF;
+    border: 0.5px solid #737373;
+    box-sizing: border-box;
+    border-radius: 62px;
+    outline: 0;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 14px;
+    color: #737373;
+}
+#Lists .card {
+    min-width: 258px;
+    padding: 14px 20px;
+    border: 0.5px solid #BFC5CF;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(76, 80, 95, 0.2);
+    border-radius: 10px;
+    margin-right: 20px;
+}
+#v-pills-home  .nav-tabs .nav-link {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #4C505F;
+    height: auto;
+}
+#v-pills-home .nav-tabs .nav-item.show .nav-link,
+#v-pills-home .nav-tabs .nav-link.active {
+    background-color: transparent;
+    border-bottom: 3px solid #FF2A13;
+    border-radius: 2.5px;
+    height: auto;
+}
+.icon-List {
+    position: relative;
+}
+.icon-List::before {
+   content: "";
+    position: absolute;
+    background-image: url("../img/my-list-icon.png");
+    width: 18px;
+    height: 18px;
+}
+
