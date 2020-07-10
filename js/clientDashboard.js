@@ -82,6 +82,14 @@ $(document).ready(function(){
 
 });
 
+$(document).ready(function () {
+    $(".list-see-more").on("click", function() {
+        $(".card").css("display", "none");
+        $(".more-list-card").css("display", "block");
+    });
+});
+
+
 $(document).ready(function(){
     function readURL(input) {
         if (input.files && input.files[0]) {

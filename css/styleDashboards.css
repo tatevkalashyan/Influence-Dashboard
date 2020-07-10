@@ -825,4 +825,7 @@ li {
     width: 18px;
     height: 18px;
 }
+.more-list-card {
+    display: none;
+}
 
