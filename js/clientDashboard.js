@@ -94,7 +94,6 @@ $(document).ready(function(){
     function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
-
             reader.onload = function (e) {
                 $('#imageResult')
                     .attr('src', e.target.result);
@@ -102,7 +101,6 @@ $(document).ready(function(){
             reader.readAsDataURL(input.files[0]);
         }
     }
-
     $(function () {
         $('#upload').on('change', function () {
             readURL(input);

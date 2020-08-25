@@ -652,6 +652,7 @@ li {
     width: 1360px;
     height: calc(100vh - 115px);
     border-right: 1px solid #ccc;
+    margin-left: auto;
 }
 .table-div  table{
     min-width: 1400px;
@@ -827,5 +828,9 @@ li {
 }
 .more-list-card {
     display: none;
+}
+.r-35-b-14 {
+    right: 35px;
+    bottom: 14px;
 }
 
