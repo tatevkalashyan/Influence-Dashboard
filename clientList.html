@@ -12,7 +12,15 @@
     <link rel="stylesheet" href="css/helper.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/styleDashboards.css">
-    <title>Client Dashboard</title>
+    <link rel="stylesheet" href="css/clientList.css">
+    <link rel="stylesheet" href="css/fresh-bootstrap-table.css">
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+    <script src="js/clientList.js"></script>
+
+
+    <link rel="stylesheet" href="cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <script src="cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <title>Client List</title>
 </head>
 <body>
 <div class="d-flex" style="max-width: 1600px; position: relative">
@@ -90,6 +98,8 @@
                     </div>
 
                     <div id="menu"> <button class="btn-header bg-red ml-4"><img src="img/filter.png" alt="" class="mr-2">Filter</button></div>
+                    <div id="menu"> <button class="btn-header-view btn-red-bordered ml-4"><i class="fa fa-eye mr-2" aria-hidden="true" alt=""></i>View</button></div>
+
                     <div id="menu-view" class="d-none"> <button class="btn-header bg-transparent ml-4"><img src="img/view.png" alt="" class="mr-2">View</button></div>
                 </div>
                 <button class="btn-header bg-purple ml-4" data-toggle="modal" data-target="#ImportModalCenter"><img src="img/import.png" alt="" class="mr-2">Import</button>
@@ -363,13 +373,123 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-12 ml-3">
+            <img src="img/Vector (3).svg" alt="">
+            <span>92,310 found</span>
+        </div>
         <div class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade show active" style="height: calc(100vh - 57px)">
-                <div class="h-100 d-flex align-items-center flex-column justify-content-sm-center">
-                    <img src="img/wlcome-icon.png" alt="">
+                <div class="h-100 d-flex flex-column justify-content-sm-top table-responsive">
+                       
+                        <!-- <div class="row">
+                            <div class="col-sm-12">
+                              <div class="panel panel-default panel-table">
+                                <div class="panel-heading">
+                                </div>
+                                <div class="panel-body">
+                                  <table id="table-scroll" class="table-scroll table">
+                                    <thead class="client-list-thead">
+                                      <tr>
+                                        <th scope="row" class="th-profil">Profile</th>
+                                        <th scope="col">Social reach</th>
+                                        <th scope="col">Engagement</th>
+                                        <th scope="col">Estimated cost per post</th>
+                                        <th scope="col">Post engagement</th>
+                                        <th scope="col">Bio</th>
+                                        <th scope="col">Topics</th>
+                                        <th scope="col">Location</th>
 
-                    <div>
-                        Welcome to our platform
+                                        <th scope="col">Languages</th>
+                                        <th scope="col">Gender</th>
+                                        <th scope="col">Age Range</th>
+                                        <th scope="col">Ethnicity</th>
+                                        <th scope="col">Locations</th>
+                                        <th scope="col">Hashtags</th>
+                                        <th scope="col">Mentions</th>
+
+                                        
+                                        <th scope="col">Website</th>
+                                        <th scope="col">Number of Posts</th>
+                                        <th scope="col">Other Social Media Accounts</th>
+                                        <th scope="col">Notes</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody class="client-list-tbody">
+                                      <tr>
+                                          <td class="d-flex justify-content-between">
+                                              <a href="#" class="pl-2">
+                                                <img src="img/+.svg" alt="">
+                                                <img src="img/prof-avatar.png" alt="" class="client-list-avatar ml-1">
+                                                <span class="ml-2 client-list-name">Kylie Jenner</span>
+                                            </a>
+                                            <a href="#" class="client-list-tbody-a-icons">
+                                                <img src="img/Vector.svg" alt="">
+                                                <img src="img/Vector (1).svg" alt="">
+                                                <img src="img/writing 2.svg" alt="">
+                                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="">
+                                                <img src="img/instagram-logo 1svg.svg" alt="">
+                                                <span class="client-list-value-text">154 million</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="bg-light-green">
+                                                <img src="img/instagram-logo 3.svg" alt="">
+                                                <span class="client-list-value-text">Good</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="">
+                                                <img src="img/instagram-logo 3.svg" alt="">
+                                                <span class="client-list-value-text btn-light-gray">$100 - $300</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="">
+                                                <p class="client-list-value-text"> 2,751$ <span>per post</span></p>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="">
+                                                <p class="client-list-value-text"><span>Germany 📧 <br> bibisbeautypalace@web.de ❤️<br> @julienco_ 👇🏼👇🏼👇🏼</span></p>
+                                            </a>
+                                        </td>
+                                        
+                                      </tr>
+                                  </tbody>
+                                  
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div> -->
+
+                          <!-- <table 
+                            data-toggle="table" 
+                            data-pagination="true" 
+                            data-search="true" 
+                            data-url="data.json">
+                            <thead class="client-list-thead">
+                                <tr>
+                                    <th data-field="Profile" data-sortable="true" class="pl-3">Profile</th>
+                                    <th data-field="Social reach" data-sortable="true" class="">Social reach</th>
+                                    <th data-field="Engagement" data-sortable="true" class="">Engagement</th>
+                                    <th data-field="Estimated cost per post" data-sortable="true" class="">Estimated cost per post</th>
+                                    <th data-field="Post engagement" data-sortable="true" class="">Post engagement</th>
+                                    <th data-field="Bio" data-sortable="true" class="">Bio</th>
+                                    <th data-field="Topics" data-sortable="true" class="">Topics</th>
+                                </tr>
+                            </thead>
+                        </table> -->
+
+                        
+                            
+
                     </div>
                 </div>
             </div>
@@ -902,12 +1022,12 @@
                                 <div class="d-flex">
                                     <div class="d-flex bg-white" style="border: 1px solid #BFC5CF;">
                                         <div>
-                                            <a href="profile.html"><img src="img/cba7c99d-de72-4072-95a6-8223b3d646c2%201%20(1).png" alt=""></a>
+                                            <img src="img/cba7c99d-de72-4072-95a6-8223b3d646c2%201%20(1).png" alt="">
                                         </div>
                                         <div>
                                             <div class="py-2 px-3">
                                                 <div class="d-flex justify-content-between fs-16 mb-2">
-                                                    <a href="profile.html">Rebeca Zamolo</a>
+                                                    Rebeca Zamolo
                                                     <button class="bg-transparent border-0">
                                                         <img src="img/carbon_delete.png" alt="" width="15" height="15" class="pointer">
                                                     </button>
@@ -1017,22 +1137,6 @@
                 </div>
 
             </div>
-
- 
-
-
-
-            
-
-
-
-
-
-
-
-
-
-
             <div class="tab-pane fade " id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                 <div class="p-30 main-blocks-div">
                     <h2 class="fs-24-bold-black text-left m-b--30">Find influencers in these topics</h2>
@@ -2385,14 +2489,12 @@
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<!-- <script src="js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+<script src="js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 <script src="js/clientDashboard.js" type="text/javascript"></script>
+<script src="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
     function openNav() {
         document.getElementById("left-sidebar-fix").classList.add("open-sidebar");
